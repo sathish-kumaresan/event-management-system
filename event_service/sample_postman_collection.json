@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "Event Management API Collection",
+    "description": "Sample collection for testing Event Management System's REST API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Events",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Sample Event\",\n    \"description\": \"Testing event creation\",\n    \"date\": \"2024-12-01\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Event by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/events/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Event",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Updated Event\",\n    \"description\": \"Updated event details\",\n    \"date\": \"2024-12-02\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/events/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Event",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/events/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+
