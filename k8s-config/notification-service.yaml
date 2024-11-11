@@ -9,5 +9,6 @@ spec:
     - protocol: TCP
       port: 5001
       targetPort: 5001
-  type: ClusterIP  # Exposes the service internally within the cluster
+      nodePort: 30001
+  type: NodePort
 
